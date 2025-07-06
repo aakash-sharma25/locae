@@ -1,14 +1,20 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Mail, MessageCircle, Clock } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Mail, MessageCircle, Clock } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -16,23 +22,27 @@ export default function ContactPage() {
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission here
-    console.log("Form submitted:", formData)
+    console.log("Form submitted:", formData);
     // You can integrate with your preferred form handling service
-    alert("Thank you for your message! We'll get back to you within 5 business days.")
-    setFormData({ name: "", email: "", subject: "", message: "" })
-  }
+    alert(
+      "Thank you for your message! We'll get back to you within 5 business days."
+    );
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -41,8 +51,8 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h1>
           <p className="text-xl text-blue-100">
-            Have questions about Locae? We're here to help! Reach out to us and we'll get back to you as soon as
-            possible.
+            Have questions about Locae? We're here to help! Reach out to us and
+            we'll get back to you as soon as possible.
           </p>
         </div>
       </section>
@@ -55,7 +65,10 @@ export default function ContactPage() {
             <Card className="shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl">Send us a Message</CardTitle>
-                <CardDescription>Fill out the form below and we'll respond within 5 business days.</CardDescription>
+                <CardDescription>
+                  Fill out the form below and we'll respond within 5 business
+                  days.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -112,7 +125,10 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button
+                    type="submit"
+                    className="w-full bg-blue-600 hover:bg-blue-700"
+                  >
                     Send Message
                   </Button>
                 </form>
@@ -123,8 +139,12 @@ export default function ContactPage() {
             <div className="space-y-8">
               <Card className="shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Contact Information</CardTitle>
-                  <CardDescription>Here are the different ways you can reach us.</CardDescription>
+                  <CardTitle className="text-2xl">
+                    Contact Information
+                  </CardTitle>
+                  <CardDescription>
+                    Here are the different ways you can reach us.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start gap-4">
@@ -132,12 +152,18 @@ export default function ContactPage() {
                       <Mail className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">Email Support</h3>
+                      <h3 className="font-semibold text-gray-900 mb-1">
+                        Email Support
+                      </h3>
                       <p className="text-gray-600 mb-2">
-                        For general inquiries, technical support, or account deletion requests.
+                        For general inquiries, technical support, or account
+                        deletion requests.
                       </p>
-                      <a href="mailto:support@locae.com" className="text-blue-600 hover:underline font-medium">
-                        support@locae.com
+                      <a
+                        href="mailto:support@locae.in"
+                        className="text-blue-600 hover:underline font-medium"
+                      >
+                        support@locae.in
                       </a>
                     </div>
                   </div>
@@ -147,10 +173,13 @@ export default function ContactPage() {
                       <Clock className="h-6 w-6 text-green-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">Response Time</h3>
+                      <h3 className="font-semibold text-gray-900 mb-1">
+                        Response Time
+                      </h3>
                       <p className="text-gray-600">
-                        We aim to respond to all inquiries within 5 business days. For urgent matters, please mention
-                        "URGENT" in your subject line.
+                        We aim to respond to all inquiries within 5 business
+                        days. For urgent matters, please mention "URGENT" in
+                        your subject line.
                       </p>
                     </div>
                   </div>
@@ -160,10 +189,12 @@ export default function ContactPage() {
                       <MessageCircle className="h-6 w-6 text-purple-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">App Support</h3>
+                      <h3 className="font-semibold text-gray-900 mb-1">
+                        App Support
+                      </h3>
                       <p className="text-gray-600">
-                        For technical issues with the app, please include your device model and app version in your
-                        message.
+                        For technical issues with the app, please include your
+                        device model and app version in your message.
                       </p>
                     </div>
                   </div>
@@ -172,30 +203,40 @@ export default function ContactPage() {
 
               <Card className="shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-xl">Frequently Asked Questions</CardTitle>
+                  <CardTitle className="text-xl">
+                    Frequently Asked Questions
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">How do I delete my account?</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      How do I delete my account?
+                    </h4>
                     <p className="text-gray-600 text-sm">
-                      Contact us at support@locae.com with your account email, and we'll delete your account and all
-                      associated data within 3-5 days.
+                      Contact us at support@locae.in with your account email,
+                      and we'll delete your account and all associated data
+                      within 3-5 days.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">How do I report inappropriate content?</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      How do I report inappropriate content?
+                    </h4>
                     <p className="text-gray-600 text-sm">
-                      Use the report feature in the app or email us with details about the content or user you'd like to
-                      report.
+                      Use the report feature in the app or email us with details
+                      about the content or user you'd like to report.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Is my location data safe?</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Is my location data safe?
+                    </h4>
                     <p className="text-gray-600 text-sm">
-                      Yes! We only store your most recent location and use enterprise-grade security. You can disable
-                      location sharing anytime in your settings.
+                      Yes! We only store your most recent location and use
+                      enterprise-grade security. You can disable location
+                      sharing anytime in your settings.
                     </p>
                   </div>
                 </CardContent>
@@ -212,7 +253,10 @@ export default function ContactPage() {
           <p className="text-xl text-blue-100 mb-8">
             Download Locae today and start connecting with your local community.
           </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+          <Button
+            size="lg"
+            className="bg-white text-blue-600 hover:bg-gray-100"
+          >
             <a
               href="https://play.google.com/store/apps/details?id=com.locae.app"
               target="_blank"
@@ -224,5 +268,5 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
