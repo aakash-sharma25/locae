@@ -15,7 +15,7 @@ export default function TermsAndConditionsPage() {
             Terms and Conditions for Locae
           </h1>
           <p className="text-gray-600 mb-4">
-            <strong>Last Updated: June 22, 2025</strong>
+            <strong>Last Updated: July 08, 2025</strong>
           </p>
 
           <div className="prose prose-lg max-w-none">
