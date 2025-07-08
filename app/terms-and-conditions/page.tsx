@@ -80,10 +80,10 @@ export default function TermsAndConditionsPage() {
               <li>
                 Notify us immediately at{" "}
                 <a
-                  href="mailto:support@locae.com"
+                  href="mailto:support@locae.in"
                   className="text-blue-600 hover:underline"
                 >
-                  support@locae.com
+                  support@locae.in
                 </a>{" "}
                 if you suspect unauthorized access to your account.
               </li>
@@ -301,10 +301,10 @@ export default function TermsAndConditionsPage() {
                 your account at any time. To delete your account and associated
                 data, contact us at{" "}
                 <a
-                  href="mailto:support@locae.com"
+                  href="mailto:support@locae.in"
                   className="text-blue-600 hover:underline"
                 >
-                  support@locae.com
+                  support@locae.in
                 </a>
                 .
               </li>
@@ -393,10 +393,10 @@ export default function TermsAndConditionsPage() {
               <li>
                 <strong>Email</strong>:{" "}
                 <a
-                  href="mailto:support@locae.com"
+                  href="mailto:support@locae.in"
                   className="text-blue-600 hover:underline"
                 >
-                  support@locae.com
+                  support@locae.in
                 </a>
               </li>
               <li>
