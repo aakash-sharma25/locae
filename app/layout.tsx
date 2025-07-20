@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Locae - Connect Locally, Discover Nearby",
   description:
     "Locae is a location-based social app that helps you connect with nearby people and discover local stores. Stay connected, stay local.",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
